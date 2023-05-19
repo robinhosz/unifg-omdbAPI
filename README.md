@@ -7,9 +7,7 @@
 <br>
 
 ### MVP 1 FINISH :heavy_check_mark:
-
-O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
-
+The first mvp of the project has already been finalized, where it already meets all the requirements that were required by our teacher diego
 - [x] Consume the api with the rest template
 - [x] Error handling if the movie does not exist
 - [x] Application error handling in general
@@ -17,7 +15,7 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Implemented the local cache system that before searching the API it asks if it exists in cache, if it exists it returns what is in cache
 
 ### MVP 2 IN DEVELOPMENT :shipit:
-
+The project is still in development and the next updates will focus on the following tasks:
 <br>
 
 ## ☕ Using the project
