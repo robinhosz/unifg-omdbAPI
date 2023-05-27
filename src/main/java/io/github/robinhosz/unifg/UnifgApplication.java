@@ -62,7 +62,7 @@ public class UnifgApplication implements CommandLineRunner {
 						} else {
 							System.out.println("Filme não encontrado em cache, fazendo requisição a API...");
 							//Chamada API
-							String response = omdbService.getMovieDetails(movieTitle);
+							String response = omdbService.getMovieDetails(movieTitle, false);
 
 							if (response.contains("\"Response\":\"False\"")) {
 

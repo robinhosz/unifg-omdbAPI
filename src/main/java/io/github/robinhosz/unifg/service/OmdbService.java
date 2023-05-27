@@ -1,8 +1,10 @@
 package io.github.robinhosz.unifg.service;
 
+import io.github.robinhosz.unifg.exceptions.FilmeNaoEncontradoException;
 import io.github.robinhosz.unifg.model.Movie;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -24,7 +26,7 @@ public class OmdbService {
         this.apiKey = apiKey;
     }
 
-    public String getMovieDetails(String title) {
+    public String getMovieDetails(String title, boolean isInterface) {
         String encodedTitle;
         try {
             encodedTitle = URLEncoder.encode(title, "UTF-8");
@@ -38,7 +40,22 @@ public class OmdbService {
                 .toUriString();
 
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
-         String  responseBody = response.getBody(); // Obtém o corpo da resposta como uma String
+
+        String responseBody = response.getBody(); // Obtém o corpo da resposta como uma String
+
+        if(isInterface) {
+           return validaParaOFront(responseBody);
+        }
+
         return responseBody;
     }
-}
+
+    public String validaParaOFront(String responseBody) {
+
+            if(responseBody.contains("\"Response\":\"False\"")) {
+                throw new FilmeNaoEncontradoException("Filme Não Encontrado");
+            } else {
+                return responseBody;
+            }
+        }
+    }

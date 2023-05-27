@@ -3,6 +3,8 @@ package io.github.robinhosz.unifg.controller;
 import io.github.robinhosz.unifg.service.OmdbService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -15,11 +17,15 @@ public class FilmeController {
     private OmdbService omdbService;
 
     @GetMapping
-    public String getMovies(@RequestHeader("filme") String filme) {
+    public ResponseEntity<String> getMovies(@RequestHeader("filme") String filme,
+                                            @RequestHeader("isInterface") boolean isInterface) {
 
         log.info("O front end mandou esse filme: -> [{}]", filme);
+         String response = omdbService.getMovieDetails(filme, isInterface);
 
-        return omdbService.getMovieDetails(filme);
+         log.info("A minha response está assim -> [{}] ", response);
+
+        return ResponseEntity.ok().body(response);
 
     }
 
