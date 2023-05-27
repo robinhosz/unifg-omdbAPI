@@ -54,6 +54,19 @@ Here are the devs who collaborated on the project:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/lucasdqrz2">
+        <img src="https://avatars.githubusercontent.com/u/107081089?v=4"width="100px;" alt="Foto do Renatuu15 no GitHub"/><br>
+        <sub>
+          <b>Renato Augusto Bezerra</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
 
 <br>
 
