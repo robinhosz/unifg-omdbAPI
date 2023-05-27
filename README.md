@@ -41,6 +41,20 @@ Here are the devs who collaborated on the project:
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/lucasdqrz2">
+        <img src="https://avatars.githubusercontent.com/u/128649478?s=400&u=4aa322799a604981bf7224d602cef4b11f53a744&v=4" width="100px;" alt="Foto do Robinhosz no GitHub"/><br>
+        <sub>
+          <b>Lucas de Queiroz Calado</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
 <br>
 
 [⬆ Voltar ao topo](#unifg)<br>
