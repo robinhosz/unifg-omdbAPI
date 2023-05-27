@@ -11,6 +11,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Movie {
+
     private String Title;
     private String Year;
     private String Rated;

@@ -33,9 +33,10 @@ public class OmdbService {
             encodedTitle = title; // Usar o título não codificado como alternativa
         }
         String url = UriComponentsBuilder.fromHttpUrl(OMDB_API_URL)
-                .queryParam("apikey", "sua-api-key-aqui")
+                .queryParam("apikey", "f154af53")
                 .queryParam("t", encodedTitle)
                 .toUriString();
+
         ResponseEntity<String> response = restTemplate.exchange(url, HttpMethod.GET, null, String.class);
          String  responseBody = response.getBody(); // Obtém o corpo da resposta como uma String
         return responseBody;
